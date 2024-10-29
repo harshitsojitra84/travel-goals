@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the World</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #282c34; /* Background color for the home page */
+            color: white; /* Text color */
+            transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition for opacity and transform */
+            height: 100vh; /* Full height of the viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Prevent overflow during transition */
+        }
+
+        .home-container {
+            text-align: center;
+        }
+
+        .home-title {
+            font-size: 48px; /* Adjust font size as needed */
+            margin-bottom: 20px; /* Space below the title */
+        }
+
+        .magic-button {
+            padding: 15px 30px; /* Padding for the button */
+            font-size: 24px; /* Font size of the button text */
+            color: white; /* Button text color */
+            background-color: #61dafb; /* Button background color */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners for the button */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .magic-button:hover {
+            background-color: #21a1f1; /* Change button color on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <h1 class="home-title">Explore the World</h1>
+        <button class="magic-button" onclick="navigateToViewer()">Tap to See Magic</button>
+    </div>
+
+    <script>
+        function navigateToViewer() {
+            // Apply fade out and scale down effect before redirecting
+            document.body.style.opacity = '0';
+            document.body.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                window.location.href = 'home.html'; // Redirect to the video viewer page
+            }, 800); // Match this duration with the CSS transition duration
+        }
+    </script>
+</body>
+</html>

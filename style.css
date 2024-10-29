@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow: hidden; /* Prevents scrolling */
+    width: 100%;
+    height: 100%;
+}
+
+.site-title {
+    position: absolute;  /* Absolute positioning to place the title at the top */
+    top: 20px;          /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center the title horizontally */
+    color: white;      /* Title color */
+    font-size: 36px;   /* Adjust font size */
+    text-align: center; /* Center the text */
+    z-index: 10;       /* Ensure the title is above other content */
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative; /* This will keep the container in place */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.video-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Each slide takes the full height */
+    position: absolute; /* Stacks slides on top of each other */
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease; /* Smooth transition for slide change */
+}
+
+video {
+    width: auto;
+    height: 100vh; /* Ensures video covers the full height */
+    max-height: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover; /* Ensures the video fills the container without distortion */
+    border-radius: 10px; /* Optional: adds a rounded corner for a polished look */
+}
